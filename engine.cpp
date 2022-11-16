@@ -41,3 +41,8 @@ bool engine::initialize() {
 window* engine::getWindow() {
     return this->window;
 }
+
+void engine::setShader(shader* shader1) {
+    this->mainShader = shader1;
+    glUseProgram(mainShader->getProgram());
+}
